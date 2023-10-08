@@ -3,7 +3,7 @@ import { useGlobalContext } from './hooks/useGlobalContext';
 
 const CartItem = ({ id, img, title, price, amount }) => {
 
-  
+  const {remove} = useGlobalContext()
 
   return (
     <article className='cart-item'>
@@ -12,7 +12,7 @@ const CartItem = ({ id, img, title, price, amount }) => {
         <h5>{title}</h5>
         <span className='item-price'>${price}</span>
         {/* remove button */}
-        <button className='remove-btn' onClick={() => console.log('remove')}>
+        <button className='remove-btn' onClick={() => remove(id)}>
           remove
         </button>
       </div>
