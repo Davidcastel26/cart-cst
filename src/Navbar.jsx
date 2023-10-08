@@ -1,5 +1,7 @@
 import { FaCartPlus } from 'react-icons/fa';
+
 const Navbar = () => {
+  
   return (
     <nav>
       <div className='nav-center'>
